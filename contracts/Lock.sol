@@ -4,31 +4,44 @@ pragma solidity ^0.8.9;
 // Uncomment this line to use console.log
 // import "hardhat/console.sol";
 
-contract Lock {
-    uint public unlockTime;
-    address payable public owner;
+contract Chatting {
 
-    event Withdrawal(uint amount, uint when);
+    struct User
+    {
+        string name;
+        address User_address;
+    }
+    
+    mapping(address=>User)AllUsers;
+    mapping(address=>bool)registerd;
+    mapping(string=>bool)AllUsernames;
 
-    constructor(uint _unlockTime) payable {
-        require(
-            block.timestamp < _unlockTime,
-            "Unlock time should be in the future"
-        );
+    function register(string memory username) public 
+    {
+        require(registerd[msg.sender]==false,"You are alredy registered");
+        AllUsers[msg.sender]=User({name:username,User_address:msg.sender});
+        registerd[msg.sender]=true;
+    }
+    function is_Registered() public view returns(bool)
+    {
+       return registerd[msg.sender];
 
-        unlockTime = _unlockTime;
-        owner = payable(msg.sender);
     }
 
-    function withdraw() public {
-        // Uncomment this line, and the import of "hardhat/console.sol", to print a log in your terminal
-        // console.log("Unlock time is %o and block timestamp is %o", unlockTime, block.timestamp);
+    function Is_UsernameAvail(string memory Username) public view returns(bool)
+    {
+        return AllUsernames[Username];
+    }    
 
-        require(block.timestamp >= unlockTime, "You can't withdraw yet");
-        require(msg.sender == owner, "You aren't the owner");
+    function Register_Username(string memory Username) public 
+    {
+        require(AllUsernames[Username]==false,"Username not available");
+        AllUsernames[Username]=true;
+    }
 
-        emit Withdrawal(address(this).balance, block.timestamp);
-
-        owner.transfer(address(this).balance);
+    function Get_User() public view returns(User memory)  
+      {
+        require(registerd[msg.sender]==true,"User is not regitered");
+        return AllUsers[msg.sender];
     }
 }
