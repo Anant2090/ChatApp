@@ -8,11 +8,20 @@ const hre = require("hardhat");
 
 async function main() {
 
+<<<<<<< HEAD
   const lock = await hre.ethers.deployContract("ChatApp");
 
   await lock.waitForDeployment();
 
   console.log("Contract Address :",lock.target);
+=======
+
+  const lock = await hre.ethers.deployContract("Chatting");
+
+  await lock.waitForDeployment();
+
+  console.log("Contract Address :", lock.target);
+>>>>>>> d5cace5529400098ae66e30bd99e970f051e99b0
 }
 
 // We recommend this pattern to be able to use async/await everywhere
