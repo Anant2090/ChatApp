@@ -12,7 +12,7 @@ Click the image below to watch a demo of the Blockchain Chat App in action.
 
 [![Chatbot Demo](https://github.com/Anant2090/ChatApp/blob/main/Chat%20App%20img.png)](https://drive.google.com/file/d/1VHweO4YnGVVgfZepl390D3S7swpT3zSx/view?usp=sharing)
 
-## Features
+## Features:
 
 
 ##### -Decentralized Messaging: No central server; messages transmitted directly between users via blockchain.
@@ -32,7 +32,7 @@ Click the image below to watch a demo of the Blockchain Chat App in action.
 ##### -Multi-platform Access: Accessible across various devices and platforms.
 
 
-### Technologies Used
+## Technologies Used:
 
 
 ##### - Blockchain: Ethereum network for decentralized messaging.
