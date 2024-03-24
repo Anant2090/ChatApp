@@ -10,7 +10,7 @@ In this project, I've developed a blockchain-based chat application for secure a
 
 Click the image below to watch a demo of the Blockchain Chat App in action.
 
-[![Chatbot Demo](https://drive.google.com/file/d/1mxbCrjOU4MEvqfU3teFSuXBLJqan_571/view?usp=sharing)](https://drive.google.com/file/d/1VHweO4YnGVVgfZepl390D3S7swpT3zSx/view?usp=sharing)
+[![Chatbot Demo](https://github.com/Anant2090/ChatApp/blob/main/Chat%20App%20img.png)](https://drive.google.com/file/d/1VHweO4YnGVVgfZepl390D3S7swpT3zSx/view?usp=sharing)
 
 ## Features
 
