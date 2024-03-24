@@ -33,11 +33,11 @@ Click the image below to watch a demo of the Blockchain Chat App in action.
 
 ### Technologies Used
 
-- **Blockchain: Ethereum network for decentralized messaging.
-- **Solidity: Smart contract language for user authentication and message handling.
-- **Hardhat: Ethereum development environment for testing and deployment.
-- **Ethers.js: JavaScript library for interacting with Ethereum smart contracts.
-- **React: Frontend framework for building the user interface.
+### - Blockchain: Ethereum network for decentralized messaging.
+### - Solidity: Smart contract language for user authentication and message handling.
+### - Hardhat: Ethereum development environment for testing and deployment.
+### - Ethers.js: JavaScript library for interacting with Ethereum smart contracts.
+### - React: Frontend framework for building the user interface.
   
 ## How to Use:
 
