@@ -31,27 +31,30 @@ Click the image below to watch a demo of the Blockchain Chat App in action.
 
 ### -Multi-platform Access: Accessible across various devices and platforms.
 
+
 ### Technologies Used
 
-### - Blockchain: Ethereum network for decentralized messaging.
-### - Solidity: Smart contract language for user authentication and message handling.
-### - Hardhat: Ethereum development environment for testing and deployment.
-### - Ethers.js: JavaScript library for interacting with Ethereum smart contracts.
-### - React: Frontend framework for building the user interface.
+
+##### - Blockchain: Ethereum network for decentralized messaging.
+##### - Solidity: Smart contract language for user authentication and message handling.
+##### - Hardhat: Ethereum development environment for testing and deployment.
+##### - Ethers.js: JavaScript library for interacting with Ethereum smart contracts.
+##### - React: Frontend framework for building the user interface.
   
 ## How to Use:
 
-### 1) Register: Create an account with a username and password.
 
-### 2) Login: Access your account securely.
+##### 1) Register: Create an account with a username and password.
 
-### 3) Add Friend: Send a friend request; friend must be registered.
+##### 2) Login: Access your account securely.
+
+##### 3) Add Friend: Send a friend request; friend must be registered.
 
 ### 4) Friend Confirmation: Accept friend requests to connect.
 
-### 5) Send Message: Select friend, compose message, and send.
+##### 5) Send Message: Select friend, compose message, and send.
 
-### 6) View Messages: Access chat history securely.
+##### 6) View Messages: Access chat history securely.
 
 
   
