@@ -17,7 +17,11 @@ const AddFriend = () => {
           <IoCloseCircleOutline
             className="h-8 w-8 hover:cursor-pointer "
             onClick={() => {
+<<<<<<< HEAD
               navigate("/user/");
+=======
+              navigate("/user");
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
             }}
           />
         </div>

@@ -1,5 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
+<<<<<<< HEAD
 import accountName from "../assets/username.png";
+=======
+import accountName from "../assets/acountName.png";
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaVideo } from "react-icons/fa6";
 import { IoIosSearch } from "react-icons/io";
@@ -9,10 +13,14 @@ import send from "../assets/send.png";
 import { TransactionContext } from "../Context/TransactionContextApi";
 import { MessageBox } from "react-chat-elements";
 import "react-chat-elements/dist/main.css";
+<<<<<<< HEAD
 import loader from "../assets/loader.gif";
 import { FiSend } from "react-icons/fi";
 import { toNumber } from "ethers";
 
+=======
+import loader from "../assets/loader.gif"
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
 
 const Chat = () => {
   const {
@@ -24,6 +32,7 @@ const Chat = () => {
     Sender_Chat,
     Loader,
     send_msg,
+<<<<<<< HEAD
     Show_Chat
   } = useContext(TransactionContext);
     // console.log(Curr_Chat);
@@ -38,6 +47,13 @@ const Chat = () => {
 
     return `${hour}:${minuits}`
   }
+=======
+  } = useContext(TransactionContext);
+  // console.log(Curr_Chat);
+  const [updator ,setupdator]=useState(false);
+  const [inp,setinp]=useState();
+
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
 
   function Load_Chat() {
     const a = document.querySelector(".messages-point");
@@ -47,6 +63,7 @@ const Chat = () => {
       if (Sender_Chat[len1].timestamp < Receiver_Chat[len2].timestamp) {
         const div = document.createElement("div");
         div.className =
+<<<<<<< HEAD
           "left flex self-start  items-end justify-between    min-w-[150px] max-w-[500px] rounded-r-lg rounded-tl-lg h-[50px] h-auto p-2 mt-5 bg-green-200";
         div.textContent = Sender_Chat[len1].msg;
         const p=document.createElement("p");
@@ -55,10 +72,18 @@ const Chat = () => {
         p.textContent=time;
 
         a.appendChild(div).append(p);
+=======
+          "left w-[100px] text-center max-w-500px mt-5 bg-white rounded-xl";
+        div.textContent = Sender_Chat[len1].msg;
+        a.appendChild(div);
+        // console.log(Sender_Chat[len1].sender);
+        // console.log(Sender_Chat[len1].msg);
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
         len1++;
       } else {
         const div = document.createElement("div");
         div.className =
+<<<<<<< HEAD
         "right flex self-end items-end justify-between   min-w-[150px]  max-w-[500px] rounded-r-lg rounded-tl-lg h-[50px] h-auto p-2 mt-5 bg-blue-300";
         div.textContent = Receiver_Chat[len2].msg;
         const p=document.createElement("p");
@@ -67,11 +92,19 @@ const Chat = () => {
         p.textContent=time;
         a.appendChild(div).append(p);
         
+=======
+          "right flex self-end items-center justify-center mt-5 w-[100px] max-w-[500px] bg-white rounded-xl";
+        div.textContent = Receiver_Chat[len2].msg;
+        a.appendChild(div);
+        // console.log(Receiver_Chat[len2].sender);
+        // console.log(Receiver_Chat[len2].msg);
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
         len2++;
       }
     }
     while (len1 < Sender_Chat.length) {
       const div = document.createElement("div");
+<<<<<<< HEAD
       div.className = "left flex self-start  items-end justify-between     min-w-[150px] max-w-[500px] rounded-r-lg rounded-tl-lg h-[50px] h-auto p-2 mt-5 bg-green-200";
       div.textContent = Sender_Chat[len1].msg;
       const p=document.createElement("p");
@@ -79,11 +112,20 @@ const Chat = () => {
         const time=TimeStamp_To_RealTime(toNumber(Sender_Chat[len1].timestamp))
         p.textContent=time;
         a.appendChild(div).append(p);
+=======
+      div.className =
+        "left w-[100px] text-center max-w-500px mt-5 bg-white rounded-xl";
+      div.textContent = Sender_Chat[len1].msg;
+      a.appendChild(div);
+      // console.log(Sender_Chat[len1].sender);
+      // console.log(Sender_Chat[len1].msg);
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
       len1++;
     }
     while (len2 < Receiver_Chat.length) {
       const div = document.createElement("div");
       div.className =
+<<<<<<< HEAD
         "right flex self-end   items-end justify-between    min-w-[150px] max-w-[500px] rounded-r-lg rounded-tl-lg h-[50px] h-auto p-2 mt-5 bg-blue-300";
       div.textContent = Receiver_Chat[len2].msg;
       const p=document.createElement("p");
@@ -91,6 +133,13 @@ const Chat = () => {
         const time=TimeStamp_To_RealTime(toNumber(Receiver_Chat[len2].timestamp))
         p.textContent=time;
         a.appendChild(div).append(p);
+=======
+        "right flex self-end mt-5 items-center justify-center  w-[100px] max-w-[500px] bg-white rounded-xl";
+      div.textContent = Receiver_Chat[len2].msg;
+      a.appendChild(div);
+      // console.log(Receiver_Chat[len2].sender);
+      // console.log(Receiver_Chat[len2].msg);
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
       len2++;
     }
   }
@@ -103,6 +152,7 @@ const Chat = () => {
   }
 
   useEffect(() => {
+<<<<<<< HEAD
     Delete_Chat();
     Load_Chat();
   }, [Sender_Chat, Receiver_Chat]);
@@ -110,6 +160,16 @@ const Chat = () => {
   return (
     <div className={`h-[75vh] flex flex-col justify-between w-[100%] p-1 rounded-sm bg-[#161A26] ${Show_Chat ? "" : "hidden"}`}>
       <div className="h-[9vh] text-white bg-[#1E2630] rounded-lg flex items-center justify-between ">
+=======
+   Delete_Chat();
+    Load_Chat();
+
+  }, [Loader,Receiver_Chat,Sender_Chat,updator]);
+
+  return (
+    <div className="h-[75vh] flex flex-col justify-between w-[100%] p-1 rounded-sm bg-[#161A26] ">
+      <div className="h-[9vh] text-white bg-[#1E2630] rounded-lg flex items-center justify-between">
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
         <div className="profile flex items-center gap-5 text-[20px] leading-5  font-semibold rounded-sm h-[9vh]">
           <img
             className="h-[67px] ml-[20px] w-[70px]"
@@ -145,7 +205,11 @@ const Chat = () => {
           onChange={() => {
             var val = document.querySelector(".inpp").value;
             setinp(val);
+<<<<<<< HEAD
           }}
+=======
+        }}
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
           className="inpp w-[700px] p-3 bg-transparent text-white"
           type="text"
           placeholder="Type Your Message here"
@@ -157,6 +221,7 @@ const Chat = () => {
           src={file}
           alt="file"
         />
+<<<<<<< HEAD
         {Loader ? (
           <img className="h-[50px] w-[50px]" src={loader}></img>
         ) : (
@@ -167,12 +232,35 @@ const Chat = () => {
               } catch (error) {
                 alert(error);
               }
+=======
+        {
+          Loader ?(<img className="h-[50px] w-[50px]" src={loader}></img>):(<img
+            onClick={()=>
+            {
+              try
+              {
+                send_msg(Curr_Chat.Address,inp);
+                setTimeout(()=>{
+                  Map_Messages(Current_Account,Curr_Chat.Address)
+                },5000)
+              }
+              catch(error)
+              {
+                alert(error);
+              }
+  
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
             }}
             className="hover:cursor-pointer h-[45px] w-[45px]"
             src={send}
             alt="send"
+<<<<<<< HEAD
           />
         )}
+=======
+          />)
+        }
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
       </div>
     </div>
   );

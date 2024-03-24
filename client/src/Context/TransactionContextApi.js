@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 export const TransactionContext = React.createContext();
 
+<<<<<<< HEAD
 const TransactionCintext = ({ children }) => {
   const [Current_Account, Set_Current_Account] = useState("");
   const [Current_Account_Username, Set_Current_Account_Username] = useState("");
@@ -18,11 +19,26 @@ const TransactionCintext = ({ children }) => {
 
   const [Loader, setLoader] = useState(false);
   const [Show_Chat,Set_Show_Chat]=useState(false);
+=======
+
+const TransactionCintext = ({ children }) => {
+  const [Current_Account, Set_Current_Account] = useState("");
+  const [Current_Account_Username, Set_Current_Account_Username] = useState("");
+  const [Sender_Chat,Set_Sender_Chat]=useState([]);
+  const [Receiver_Chat,Set_Receiver_Chat]=useState([]);
+
+  const [Curr_Chat, Set_Curr_Chat] = useState({ name: "", Addrss: "" });
+  const [navi, setnavi] = useState(false);
+
+
+  const [Loader,setLoader]=useState(false);
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
   //  async function a()
   //  {
   //   console.log(b[0]);
   //  }
 
+<<<<<<< HEAD
   useEffect(() => {
     // send_msg("0x53b45C1Dd01dC5cdB04CFd1b2c29688818A23FD6","hello");
     // Map_Messages();
@@ -33,6 +49,23 @@ const TransactionCintext = ({ children }) => {
     const a = await Get_All_Msg(from, to);
     const b = await Get_All_Msg(to, from);
 
+=======
+  useEffect(()=>{
+    // send_msg("0x53b45C1Dd01dC5cdB04CFd1b2c29688818A23FD6","hello");
+    // Map_Messages();
+    // a();
+    
+
+      
+  
+  },[])
+
+  async function Map_Messages(from,to)
+  {
+    const a=await Get_All_Msg(from,to);
+    const b=await Get_All_Msg(to,from);
+    
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
     Set_Sender_Chat(a);
     Set_Receiver_Chat(b);
     // var len1=0;
@@ -59,18 +92,33 @@ const TransactionCintext = ({ children }) => {
     //   console.log(a[len1].sender);
     //   console.log(a[len1].msg);
     //   len1++;
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
     // }
     // while(len2<b.length)
     // {
     //   console.log(b[len2].sender);
     //   console.log(b[len2].msg);
     //   len2++;
+<<<<<<< HEAD
 
     // }
   }
 
   async function send_msg(to, str) {
+=======
+      
+    // }
+
+
+  }
+  
+
+  async function send_msg(to,str) {
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
     try {
       const provider = new ethers.BrowserProvider(window.ethereum);
       const signer = await provider.getSigner();
@@ -80,11 +128,18 @@ const TransactionCintext = ({ children }) => {
         signer
       );
       setLoader(true);
+<<<<<<< HEAD
       const b = await contract_write.sendMessage(to, str);
       setTimeout(() => {
         setLoader(false);
         console.log(Curr_Chat.Address,Current_Account)
         Map_Messages(Current_Account,Curr_Chat.Address);
+=======
+      const b = await contract_write.sendMessage(to,str);
+      setTimeout(() => {
+        setLoader(false);
+        
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
       }, 25000);
     } catch (error) {
       setLoader(false);
@@ -92,7 +147,11 @@ const TransactionCintext = ({ children }) => {
     }
   }
 
+<<<<<<< HEAD
   async function Get_All_Msg(from, to) {
+=======
+  async function Get_All_Msg(from,to) {
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
     try {
       const provider = new ethers.BrowserProvider(window.ethereum);
       const signer = await provider.getSigner();
@@ -101,7 +160,11 @@ const TransactionCintext = ({ children }) => {
         Contract_ABI,
         signer
       );
+<<<<<<< HEAD
       const b = await contract_write.Get_All_Messages(from, to);
+=======
+      const b = await contract_write.Get_All_Messages(from,to);
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
       // console.log(b);
       return b;
     } catch (error) {
@@ -159,6 +222,10 @@ const TransactionCintext = ({ children }) => {
       console.log(error);
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
   async function get_acc_Address_Name() {
     const a = await window.ethereum.request({ method: "eth_accounts" });
     Set_Current_Account(a[0]);
@@ -176,6 +243,10 @@ const TransactionCintext = ({ children }) => {
       console.log(error);
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
   async function login(val) {
     try {
       const provider = new ethers.BrowserProvider(window.ethereum);
@@ -202,6 +273,10 @@ const TransactionCintext = ({ children }) => {
       console.log(error);
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
   async function getAllMsg(to) {
     try {
       const provider = new ethers.BrowserProvider(window.ethereum);
@@ -218,6 +293,10 @@ const TransactionCintext = ({ children }) => {
       console.log(error);
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
   async function Connect() {
     if (!window.ethereum) {
       alert("Metamask is not installed on your brouser");
@@ -230,6 +309,10 @@ const TransactionCintext = ({ children }) => {
       Set_Current_Account(accounts[0]);
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
   async function Add_Friend(Add, Name) {
     const provider = new ethers.BrowserProvider(window.ethereum);
     const signer = await provider.getSigner();
@@ -246,6 +329,10 @@ const TransactionCintext = ({ children }) => {
         await contract_write.addFriend(Add, Name);
         setTimeout(() => {
           setLoader(false);
+<<<<<<< HEAD
+=======
+          
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
         }, 20000);
       } else {
         setLoader(false);
@@ -256,6 +343,10 @@ const TransactionCintext = ({ children }) => {
       alert(errorMessage.substring(20, 56));
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
   return (
     <TransactionContext.Provider
       value={{
@@ -269,7 +360,10 @@ const TransactionCintext = ({ children }) => {
         getmyfriend,
         get_acc_Address_Name,
         Current_Account_Username,
+<<<<<<< HEAD
         Set_Current_Account_Username,
+=======
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
         Curr_Chat,
         Set_Curr_Chat,
         getAllMsg,
@@ -278,9 +372,14 @@ const TransactionCintext = ({ children }) => {
         Sender_Chat,
         setLoader,
         Loader,
+<<<<<<< HEAD
         send_msg,
         Show_Chat,
         Set_Show_Chat,
+=======
+        send_msg
+        
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
       }}
     >
       {children}

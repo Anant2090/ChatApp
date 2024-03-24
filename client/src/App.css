@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
 .App {
   text-align: center;
 }
@@ -36,3 +40,17 @@
     transform: rotate(360deg);
   }
 }
+<<<<<<< HEAD
+=======
+=======
+*{
+  margin:0;
+  padding:0;
+}
+.login
+{
+  position: absolute;
+  z-index: 10;
+}
+>>>>>>> d5cace5529400098ae66e30bd99e970f051e99b0
+>>>>>>> 92423fa94f7a39ecc0192ca185a2c9a0ba84ca30
