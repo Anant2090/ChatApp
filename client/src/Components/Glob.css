@@ -1,0 +1,29 @@
+.rotate {
+    animation: rotateForever 10s linear infinite; /* Adjust duration and timing function as needed */
+  }
+  
+  @keyframes rotateForever {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+
+.animated-image {
+  position: absolute;
+  animation: moveUpDown 1s infinite alternate ease-in-out;
+}
+
+@keyframes moveUpDown {
+  0% {
+    top: 50px;
+  }
+  100% {
+    top: 70px; /* Adjust this value as needed for your design */
+  }
+}
