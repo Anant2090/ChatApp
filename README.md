@@ -15,21 +15,21 @@ Click the image below to watch a demo of the Blockchain Chat App in action.
 ## Features
 
 
-### -Decentralized Messaging: No central server; messages transmitted directly between users via blockchain.
+##### -Decentralized Messaging: No central server; messages transmitted directly between users via blockchain.
 
-### -Immutable Records: Messages stored on blockchain, ensuring tamper-proof history.
+##### -Immutable Records: Messages stored on blockchain, ensuring tamper-proof history.
 
-### -Censorship Resistance: Resilient to censorship; users have unrestricted communication.
+##### -Censorship Resistance: Resilient to censorship; users have unrestricted communication.
 
-### -End-to-End Encryption: Messages encrypted for privacy and security.
+##### -End-to-End Encryption: Messages encrypted for privacy and security.
 
-### -User Anonymity: Optional anonymity with no personal data required.
+##### -User Anonymity: Optional anonymity with no personal data required.
 
-### -Smart Contract Integration: Facilitates secure message delivery and access control.
+##### -Smart Contract Integration: Facilitates secure message delivery and access control.
 
-### -Token Economy: Potential for token incentives or premium features.
+##### -Token Economy: Potential for token incentives or premium features.
 
-### -Multi-platform Access: Accessible across various devices and platforms.
+##### -Multi-platform Access: Accessible across various devices and platforms.
 
 
 ### Technologies Used
@@ -50,7 +50,7 @@ Click the image below to watch a demo of the Blockchain Chat App in action.
 
 ##### 3) Add Friend: Send a friend request; friend must be registered.
 
-### 4) Friend Confirmation: Accept friend requests to connect.
+##### 4) Friend Confirmation: Accept friend requests to connect.
 
 ##### 5) Send Message: Select friend, compose message, and send.
 
